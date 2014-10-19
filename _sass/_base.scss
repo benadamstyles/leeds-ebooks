@@ -20,9 +20,20 @@ body {
     font-weight: 300;
     color: $text-color;
     background-color: $background-color;
+    background-image: url(/images/noise.gif);
     -webkit-text-size-adjust: 100%;
 }
 
+
+
+/**
+ * HR
+ */
+hr {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
 
 
 /**
@@ -44,18 +55,31 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
+.appIcon {
+    border-radius: 20%;
+}
 
 
 
 /**
  * Figures
  */
-figure > img {
-    display: block;
+figure {
+    a {
+        color: #fff;
+    }
+    a:visited {
+        color: #fff;
+    }
+    img {
+        display: block;
+    }
 }
 
 figcaption {
+    margin-top: $spacing-unit/2;
     font-size: $small-font-size;
+    line-height: 1.15;
 }
 
 
@@ -91,14 +115,19 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $brand-color;
     text-decoration: none;
+    -webkit-transition: all 0.15s ease-out;
+            transition: all 0.15s ease-out;
+    -webkit-transition-property: text-shadow, color;
+            transition-property: text-shadow, color;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: $brand-color;
     }
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color: lighten($brand-color,20%) !important;
+        text-decoration: none;
+        text-shadow: 0 0 0.5em rgba(255,255,255,0.5);
     }
 }
 
@@ -130,7 +159,7 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: inherit;
 }
 
 code {
@@ -201,4 +230,13 @@ pre {
             fill: $grey-color;
         }
     }
+}
+
+
+
+/**
+ * Text formatting
+ */
+.italic {
+    font-style: italic;
 }
