@@ -21,6 +21,11 @@
     &:visited {
         color: $brand-color;
     }
+
+    img {
+        max-height: 2em;
+        margin: 0 0.4em 0.4em 0;
+    }
 }
 
 .site-nav {
@@ -199,6 +204,10 @@ figure {
     img {
         box-shadow: 0.2em 0.2em 0.4em rgba(0,0,0,0.5);
     }
+}
+.home h2 {
+    box-shadow: 0 6px 6px -6px rgba(0,0,0,0.5);
+    // box-shadow: 0 5px 7px -4px black;
 }
 
 /**
