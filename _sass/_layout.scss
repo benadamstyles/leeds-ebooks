@@ -3,15 +3,21 @@
  */
 .site-header {
     // border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-dark;
+    // border-bottom: 1px solid $grey-color-dark;
     min-height: 56px;
 
+    background-image: url(/images/noise.gif);
+    box-shadow: $base-shadow;
+    padding-top: 0.3em;
+
     // Positioning context for the mobile navigation icon
-    position: relative;
+    // position: relative;
+    position: fixed;
+    width: 100%;
 }
 
 .site-title {
-    font-size: 26px;
+    font-size: 30px;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
@@ -23,7 +29,7 @@
     }
 
     img {
-        max-height: 2em;
+        max-height: 1.4em;
         margin: 0 0.4em 0.4em 0;
     }
 }
@@ -167,7 +173,7 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    padding: $spacing-unit*3.5 0;
 }
 
 .page-heading {

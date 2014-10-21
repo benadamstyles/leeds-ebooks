@@ -7,20 +7,24 @@
 
 // Our variables
 $base-font-family: "Crimson Text", serif;
+$base-sans-face:   "Open Sans", sans-serif;
 $base-font-size:   16pt;
 $small-font-size:  $base-font-size * 0.875;
+$small-sans-size:  $base-font-size * 0.7;
 $base-line-height: 1.5;
 
-$base-shadow: 0.2em 0.2em 0.4em rgba(0,0,0,0.5);
+$base-shadow:      0.2em 0.2em 0.4em rgba(0,0,0,0.5);
 
 $spacing-unit:     1.3em;
 
 $text-color:       #fff;
 $background-color: #333;
-$brand-color:      #df013a;
+// $brand-color:      #df013a; // ORIGINAL!
+// $brand-color:      #FF225A;
+$brand-color:      #FF3961;
 
 $grey-color:       #bbb;
-$grey-color-light: lighten($grey-color, 40%);
+$grey-color-light: lighten($grey-color, 15%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $on-palm:          600px;

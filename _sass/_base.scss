@@ -72,11 +72,12 @@ img {
  * Figures
  */
 figure {
+    color: $grey-color;
     a {
-        color: #fff;
+        color: $grey-color;
     }
     a:visited {
-        color: #fff;
+        color: $grey-color;
     }
     img {
         display: block;
@@ -84,9 +85,12 @@ figure {
 }
 
 figcaption {
+    font-family: $base-sans-face;
+    font-weight: 300;
     margin-top: $spacing-unit/2;
-    font-size: $small-font-size;
+    font-size: $small-sans-size;
     line-height: 1.15;
+    color: inherit;
 }
 
 
