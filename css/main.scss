@@ -6,30 +6,32 @@
 
 
 // Our variables
-$base-font-family: "Crimson Text", serif;
-$base-sans-face:   "Open Sans", sans-serif;
-$base-font-size:   16pt;
-$small-font-size:  $base-font-size * 0.875;
-$small-sans-size:  $base-font-size * 0.7;
-$base-line-height: 1.5;
+$base-font-family:  "Crimson Text", serif;
+$base-sans-face:    "Open Sans", sans-serif;
+$base-font-size:    16pt;
+$small-font-size:   $base-font-size * 0.875;
+$small-sans-size:   $base-font-size * 0.7;
+$base-line-height:  1.5;
 
-$base-shadow:      0.2em 0.2em 0.4em rgba(0,0,0,0.5);
-$base-shadow-vert: 0 0.2em 0.4em rgba(0,0,0,0.5);
+$base-shadow:       0.2em 0.2em 0.4em rgba(0,0,0,0.5);
+$base-shadow-vert:  0 0.2em 0.4em rgba(0,0,0,0.5);
+$shadow-pressed:    0.1em 0.1em 0.2em rgba(0,0,0,0.5);
+$base-trans-timing: 0.15s ease-out;
 
-$spacing-unit:     1.3em;
+$spacing-unit:      1.3em;
 
-$text-color:       #fff;
-$background-color: #333;
-// $brand-color:      #df013a; // ORIGINAL!
-// $brand-color:      #FF225A;
-$brand-color:      #FF3961;
+$text-color:        #fff;
+$background-color:  #333;
+$brand-color-orig:  #df013a; // ORIGINAL!
+// $brand-color:       #FF225A;
+$brand-color:       #FF3961;
 
-$grey-color:       #bbb;
-$grey-color-light: lighten($grey-color, 15%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color:        #bbb;
+$grey-color-light:  lighten($grey-color, 15%);
+$grey-color-dark:   darken($grey-color, 25%);
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$on-palm:           600px;
+$on-laptop:         800px;
 
 
 
@@ -44,6 +46,24 @@ $on-laptop:        800px;
     @media screen and (max-width: $device) {
         @content;
     }
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin set($v,$h,$x) {
+  @if $v {
+    #{$v}:$x;
+  }
+  #{$h}:$x;
+  @if $v==bottom {
+    top: auto;
+  }
+  @if $h==right {
+    left: auto;
+  }
 }
 
 

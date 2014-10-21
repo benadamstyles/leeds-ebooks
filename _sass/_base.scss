@@ -55,6 +55,7 @@ ul, ol, dl, figure,
 img {
     max-width: 100%;
     vertical-align: middle;
+    border: none;
 }
 .appIcon, .mugshot {
     border-radius: 20%;
@@ -73,6 +74,7 @@ img {
  */
 figure {
     color: $grey-color;
+    position: relative; // positioning context for readbox buttons
     a {
         color: $grey-color;
     }
@@ -81,6 +83,38 @@ figure {
     }
     img {
         display: block;
+    }
+    .readbox { // readbox button
+        @include square(2em);
+        @include set(top, right, 0.5em);
+        box-shadow: $base-shadow;
+        border-radius: 0.4em;
+        cursor: pointer;
+        position: absolute;
+        background-color: $background-color;
+        -webkit-transition: background-color $base-trans-timing;
+                transition: background-color $base-trans-timing;
+
+        &:hover {
+            background-color: $brand-color-orig;
+        }
+        &:active {
+            top: 0.6em;
+            right: 0.4em;
+            box-shadow: $shadow-pressed;
+        }
+
+        svg {
+            @include set(top, left, 5%);
+            @include square(90%);
+            position: relative;
+            fill: $brand-color-orig;
+            -webkit-transition: fill $base-trans-timing;
+                    transition: fill $base-trans-timing;
+            &:hover {
+                fill: $background-color;
+            }
+        }
     }
 }
 
@@ -126,8 +160,8 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $brand-color;
     text-decoration: none;
-    -webkit-transition: all 0.15s ease-out;
-            transition: all 0.15s ease-out;
+    -webkit-transition: all $base-trans-timing;
+            transition: all $base-trans-timing;
     -webkit-transition-property: text-shadow, color;
             transition-property: text-shadow, color;
 

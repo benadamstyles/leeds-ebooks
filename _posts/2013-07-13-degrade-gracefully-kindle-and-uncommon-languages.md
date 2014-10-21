@@ -53,8 +53,7 @@ Today, I completed the ebook design and conversion of <a href="http://www.arcpub
 Hey presto, your font has been embedded. Now, to make your foreign text disappear in the MOBI format. We&#8217;ll use the &#8220;`display : none`&#8221; CSS property, as follows:
 
 1.  Create a new <a href="http://www.w3schools.com/css/css_mediatypes.asp" title="CSS Media Queries" target="_blank">media query</a> rule **at the bottom of your CSS stylesheet** (this is important due to the cascading nature of CSS &#8211; <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_Priority_scheme_.28highest_to_lowest.29" title="CSS Priority Scheme" target="_blank">later rules override earlier rules</a>):  
-    `@media amzn-mobi {<br />
-}`
+    `@media amzn-mobi {}`
 2.  Copy the selector for each paragraph you want to hide in the MOBI version of your ebook, and paste it between the curly brackets in the new media query. Then add the CSS property &#8220;`display : none`&#8221; within that pasted selector&#8217;s own curly brackets.
 
 For example, this:
