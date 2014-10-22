@@ -15,3 +15,8 @@ highlighter: rouge
 # Assts
 sass:
   style: compressed
+
+# Plugins
+sitemap:
+    include_posts:
+        - "/blog/index.html"

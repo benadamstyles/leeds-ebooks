@@ -97,6 +97,9 @@ figure {
 
         &:hover {
             background-color: $brand-color-orig;
+            svg {
+                fill: $background-color;
+            }
         }
         &:active {
             top: 0.6em;
@@ -111,9 +114,9 @@ figure {
             fill: $brand-color-orig;
             -webkit-transition: fill $base-trans-timing;
                     transition: fill $base-trans-timing;
-            &:hover {
-                fill: $background-color;
-            }
+            // &:hover {
+            //     fill: $background-color;
+            // }
         }
     }
 }
