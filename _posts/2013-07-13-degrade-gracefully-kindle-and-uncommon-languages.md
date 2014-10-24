@@ -2,7 +2,6 @@
 title: 'Degrade Gracefully: Kindle and Uncommon Languages'
 author: Ben
 layout: post
-permalink: /2013/07/13/degrade-gracefully-kindle-and-uncommon-languages/
 categories:
   - eBook Design
   - Tutorials

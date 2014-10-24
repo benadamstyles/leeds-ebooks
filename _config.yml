@@ -8,11 +8,13 @@ url: "http://leeds-ebooks.co.uk" # the base hostname & protocol for your site
 twitter_username: BenStyles
 github_username:  leeds-ebooks
 
+permalink: /blog/:year/:month/:title/
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
 
-# Assts
+# Assets
 sass:
   style: compressed
 

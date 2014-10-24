@@ -2,7 +2,6 @@
 title: eBooks or Apps, and the Stats
 author: Ben
 layout: post
-permalink: /2013/07/08/ebooks-or-apps-and-the-stats/
 categories:
   - News
   - Technology

@@ -6,6 +6,7 @@
     // border-bottom: 1px solid $grey-color-dark;
     min-height: 56px;
 
+    background-color: $background-color;
     background-image: url(/images/noise.gif);
     box-shadow: $base-shadow-vert;
     padding-top: 0.3em;
@@ -199,6 +200,27 @@
     display: block;
     font-size: 24px;
 }
+
+/**
+ * Gists
+ */
+.gist {
+    * {
+        background-color: transparent !important;
+    }
+    pre {
+        overflow-x: auto !important;
+    }
+    .line-numbers {
+        font-size: 15px !important;
+    }
+}
+.gist-data {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+
 
 /**
  * Homepage

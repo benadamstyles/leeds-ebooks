@@ -2,7 +2,6 @@
 title: The Best eBook Development Software
 author: Ben
 layout: post
-permalink: /2013/07/14/the-best-ebook-development-software/
 categories:
   - eBook Design
   - Resources

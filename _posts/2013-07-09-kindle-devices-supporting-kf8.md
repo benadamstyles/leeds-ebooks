@@ -2,7 +2,6 @@
 title: Kindle Devices supporting KF8
 author: Ben
 layout: post
-permalink: /2013/07/09/kindle-devices-supporting-kf8/
 categories:
   - eBook Design
   - Resources

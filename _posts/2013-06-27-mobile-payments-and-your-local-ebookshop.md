@@ -2,7 +2,6 @@
 title: Mobile Payments and Your Local eBookshop
 author: Ben
 layout: post
-permalink: /2013/06/27/mobile-payments-and-your-local-ebookshop/
 categories:
   - Technology
 tags:

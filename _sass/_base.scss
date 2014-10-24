@@ -19,8 +19,8 @@ body {
     line-height: $base-line-height;
     font-weight: 300;
     color: $text-color;
-    background-color: $background-color;
     background-image: url(/images/noise.gif);
+    background-color: $background-color;
     // background-attachment: fixed;
     -webkit-text-size-adjust: 100%;
 }
