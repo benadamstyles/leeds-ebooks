@@ -211,8 +211,11 @@
     pre {
         overflow-x: auto !important;
     }
-    .line-numbers {
+    .line-numbers, pre {
         font-size: 15px !important;
+    }
+    .line {
+      color: $text-color;
     }
 }
 .gist-data {
