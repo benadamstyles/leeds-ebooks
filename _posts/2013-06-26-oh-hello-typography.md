@@ -2,7 +2,6 @@
 title: "Oh Hello, Typography"
 author: Ben
 layout: post
-date: 2013-06-26
 categories:
   - eBook Design
 tags:

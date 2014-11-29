@@ -1,4 +1,4 @@
----  
+---
 title: Rounding a number to 2 decimal places for currency display
 author: Ben
 layout: post

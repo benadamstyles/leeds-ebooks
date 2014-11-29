@@ -8,6 +8,6 @@ Add the following conditions to the hasClass method:
 
 Comment out the following line:
 
-## Scroll jank / poor performance
+## Scroll [jank](http://jankfree.org) / poor performance
 
 I noticed that the more steps I added to my tour, the more any scrollable divs I had would flicker and jump when scrolled. It took me a while to track down the source: a frankly baffling `"scroll"` event listener ticker function that uses a `setTimeout` of 16ms (why they haven’t used `requestAnimationFrame()` if it’s available is beyond me). Needless to say, I got rid of that and all my troubles went away. Fortunately it’s in there as a self-calling function and doesn’t seem to have any dependent functions so you can simply comment it out (if you’re using it in a page where scrolling isn’t an issue – for example, you may have problems with the software keyboard on iOS forcing a resize so you may need to rewrite the function to use `requestAnimationFrame()` rather than just getting rid of it altogether). Find these lines and comment them out, or delete them, or rewrite them, as you need:
