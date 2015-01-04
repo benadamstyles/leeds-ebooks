@@ -19,7 +19,7 @@ Prescribing specific fonts in ebooks can be controversial, but there’s no doub
 
 However, one problem I have always encountered is that the **Kindle Fire** mode in [Kindle Previewer](http://www.amazon.com/gp/feature.html?docId=1000765261) has never honoured the following CSS:
 
-```CSS
+```
 .heading {
   font-family: sans-serif;
 }
@@ -27,7 +27,7 @@ However, one problem I have always encountered is that the **Kindle Fire** mode 
 
 This week, I discovered why, thanks to [this discussion](http://www.mobileread.com/forums/showthread.php?t=228868). For whatever reason (i.e. ignorance of standards), Kindle Fire mode (not having a Kindle Fire myself, I have no idea if this is true for the real device too) requires a specific typeface to be referenced first, thus:
 
-```CSS
+```
 .heading {
   font-family: "Arial", sans-serif;
 }
