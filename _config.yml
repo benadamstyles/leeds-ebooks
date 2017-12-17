@@ -23,3 +23,6 @@ sass:
 sitemap:
     include_posts:
         - "/blog/index.html"
+
+gems:
+  - jekyll-gist
