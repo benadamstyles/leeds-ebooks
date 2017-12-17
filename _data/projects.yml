@@ -30,7 +30,7 @@ websites:
 
   - name: The Making of History
     href: http://www.makingofhistory.com/
-    img_src: http://www.makingofhistory.com/images/vintage-scarlet.gif
+    img_src: /images/websites/min/making-of-history.gif
 
   - name: Arc Sessions
     href: https://www.arcpublications.co.uk/sessions
