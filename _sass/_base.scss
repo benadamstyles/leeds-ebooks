@@ -1,290 +1,293 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
 }
-
-
 
 /**
  * Basic styling
  */
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-image: url(/images/noise.gif);
-    background-color: $background-color;
-    // background-attachment: fixed;
-    -webkit-text-size-adjust: 100%;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 300;
+  color: $text-color;
+  background-image: url(/images/noise.gif);
+  background-color: $background-color;
+  // background-attachment: fixed;
+  -webkit-text-size-adjust: 100%;
 }
-
-
 
 /**
  * HR
  */
 hr {
-    height: 12px;
-    border: 0;
-    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+  height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
 }
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 2;
 }
-
-
 
 /**
  * Images
  */
 img {
-    max-width: 100%;
-    vertical-align: middle;
-    border: none;
+  max-width: 100%;
+  vertical-align: middle;
+  border: none;
 }
-.appIcon, .mugshot {
-    border-radius: 20%;
+.appIcon,
+.mugshot {
+  border-radius: 20%;
 }
 .mugshot {
-    max-width: 7.5em;
-    float: right;
-    margin: 0 0 $spacing-unit $spacing-unit;
-    box-shadow: $base-shadow;
+  max-width: 7.5em;
+  float: right;
+  margin: 0 0 $spacing-unit $spacing-unit;
+  box-shadow: $base-shadow;
 }
-
-
 
 /**
  * Figures
  */
 figure {
+  color: $grey-color;
+  position: relative; // positioning context for readbox buttons
+  a {
     color: $grey-color;
-    position: relative; // positioning context for readbox buttons
-    a {
-        color: $grey-color;
-    }
-    a:visited {
-        color: $grey-color;
-    }
-    img {
-        display: block;
-    }
-    .readbox { // readbox button
-        @include square(2em);
-        @include set(top, right, 0.5em);
-        box-shadow: $base-shadow;
-        border-radius: 0.4em;
-        cursor: pointer;
-        position: absolute;
-        background-color: $background-color;
-        -webkit-transition: background-color $base-trans-timing;
-                transition: background-color $base-trans-timing;
+  }
+  a:visited {
+    color: $grey-color;
+  }
+  img {
+    display: block;
+  }
+  .readbox {
+    // readbox button
+    @include square(2em);
+    @include set(top, right, 0.5em);
+    box-shadow: $base-shadow;
+    border-radius: 0.4em;
+    cursor: pointer;
+    position: absolute;
+    background-color: $background-color;
+    -webkit-transition: background-color $base-trans-timing;
+    transition: background-color $base-trans-timing;
 
-        &:hover {
-            background-color: $brand-color-orig;
-            svg {
-                fill: $background-color;
-            }
-        }
-        &:active {
-            top: 0.6em;
-            right: 0.4em;
-            box-shadow: $shadow-pressed;
-        }
-
-        svg {
-            @include set(top, left, 5%);
-            @include square(90%);
-            position: relative;
-            fill: $brand-color-orig;
-            -webkit-transition: fill $base-trans-timing;
-                    transition: fill $base-trans-timing;
-            // &:hover {
-            //     fill: $background-color;
-            // }
-        }
+    &:hover {
+      background-color: $brand-color-orig;
+      svg {
+        fill: $background-color;
+      }
     }
+    &:active {
+      top: 0.6em;
+      right: 0.4em;
+      box-shadow: $shadow-pressed;
+    }
+
+    svg {
+      @include set(top, left, 5%);
+      @include square(90%);
+      position: relative;
+      fill: $brand-color-orig;
+      -webkit-transition: fill $base-trans-timing;
+      transition: fill $base-trans-timing;
+      // &:hover {
+      //     fill: $background-color;
+      // }
+    }
+  }
 }
 
 figcaption {
-    font-family: $base-sans-face;
-    font-weight: 300;
-    margin-top: $spacing-unit/2;
-    font-size: $small-sans-size;
-    line-height: 1.15;
-    color: inherit;
+  font-family: $base-sans-face;
+  font-weight: 300;
+  margin-top: $spacing-unit/2;
+  font-size: $small-sans-size;
+  line-height: 1.15;
+  color: inherit;
+  text-align: center;
 }
-
-
 
 /**
  * Lists
  */
-ul, ol {
-    margin-left: $spacing-unit;
+ul,
+ol {
+  margin-left: $spacing-unit;
 }
 
 li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
 }
-
-
 
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
 }
-
-
 
 /**
  * Links
  */
 a {
+  color: $brand-color;
+  text-decoration: none;
+  -webkit-transition: all $base-trans-timing;
+  transition: all $base-trans-timing;
+  -webkit-transition-property: text-shadow, color;
+  transition-property: text-shadow, color;
+
+  &:visited {
     color: $brand-color;
+  }
+
+  &:hover {
+    color: lighten($brand-color, 20%) !important;
     text-decoration: none;
-    -webkit-transition: all $base-trans-timing;
-            transition: all $base-trans-timing;
-    -webkit-transition-property: text-shadow, color;
-            transition-property: text-shadow, color;
-
-    &:visited {
-        color: $brand-color;
-    }
-
-    &:hover {
-        color: lighten($brand-color,20%) !important;
-        text-decoration: none;
-        text-shadow: 0 0 0.5em rgba(255,255,255,0.5);
-    }
+    text-shadow: 0 0 0.5em rgba(255, 255, 255, 0.5);
+  }
 }
-
-
 
 /**
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
+  padding-left: $spacing-unit / 2;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
 
-    > :last-child {
-        margin-bottom: 0;
-    }
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
-
-
 
 /**
  * Code formatting
  */
 pre,
 code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: inherit;
+  font-size: 15px;
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: inherit;
 }
 
 code {
-    padding: 1px 5px;
+  padding: 1px 5px;
 }
 
 pre {
-    padding: 8px 12px;
-    overflow-x: scroll;
+  padding: 8px 12px;
+  overflow-x: scroll;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
-
-
 
 /**
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
-    max-width:         calc(800px - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
+  max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
+  max-width: calc(800px - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
 
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(800px - (#{$spacing-unit}));
-        max-width:         calc(800px - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(800px - (#{$spacing-unit}));
+    max-width: calc(800px - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
 }
-
-
 
 /**
  * Clearfix
  */
 %clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
-
-
 
 /**
  * Icons
  */
 .icon {
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
 
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
+    path {
+      fill: $grey-color;
     }
+  }
 }
-
-
 
 /**
  * Text formatting
  */
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
