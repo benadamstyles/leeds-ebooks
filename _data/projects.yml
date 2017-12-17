@@ -1,135 +1,223 @@
 oss:
+
   - name: Ebookama – ebook automation in node.js
     href: https://github.com/leeds-ebooks/ebookama
     img_src: /images/oss/min/kingfisher.jpg
+
   - name: roots-i18n – internationalization extension for the Roots static site generator
     href: https://github.com/Leeds-eBooks/roots-i18n
     img_src: /images/oss/min/kingfisher.jpg
+
   - name: Kingfisher syntax theme for Atom
     href: https://atom.io/themes/kingfisher-syntax
     img_src: /images/oss/min/kingfisher.jpg
 
 apps:
+
   - name: MealsUp
     href: https://itunes.apple.com/app/mealsup/id1200169378
     img_src: /images/apps/min/mealsup.jpg
+
   - name: Translatory
     href: https://itunes.apple.com/us/app/translatory-translate-poetry/id1068155872
     img_src: https://www.arcpublications.co.uk/images/translatory-icon.png
+
   - name: Featherquest
     href: https://bit.ly/featherquest
     img_src: /images/apps/min/featherquest.jpg
 
 websites:
+
   - name: The Making of History
     href: http://www.makingofhistory.com/
     img_src: http://www.makingofhistory.com/images/vintage-scarlet.gif
+
   - name: Arc Sessions
     href: https://www.arcpublications.co.uk/sessions
     img_src: https://www.arcpublications.co.uk/sessions/images/Arc-play-white.png
+
   - name: Ink and Mist
     href: http://inkandmist.com/
     img_src: /images/websites/min/inkandmist.jpg
+
   - name: Curtain Styles
     href: http://curtainstyles.net/
     img_src: /images/websites/min/curtainstyles.jpg
+
   - name: Arc Tour
     href: http://arctour.co.uk/
     img_src: /images/websites/min/arctour.jpg
 
 ebooks:
+
   - href: http://www.amazon.co.uk/gp/product/B00GHPG2TK/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00GHPG2TK&linkCode=as2&tag=leedeboo-21&linkId=WDS7KYWS6V35HLXO
     img_src: /images/ebooks/min-200/agenda-rodin.jpg
-    name: Agenda Editions &bull; <span class="italic">Rodin&rsquo;s Shadow</span> by Patricia McCarthy
+    publisher: Agenda Editions
+    title: Rodin’s Shadow
+    author: Patricia McCarthy
+
   - href: http://www.amazon.co.uk/gp/product/B00M4P6OSG/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00M4P6OSG&linkCode=as2&tag=leedeboo-21&linkId=KOOQWPB744SJT75B
     img_src: /images/ebooks/min-200/arachne-devilskein.jpg
-    name: Arachne Press &bull; <span class="italic">Devilskein &amp; Dearlove</span> by Alex Smith
+    publisher: Arachne Press
+    title: Devilskein & Dearlove
+    author: Alex Smith
+
   - href: http://www.amazon.co.uk/gp/product/B00O4CPNV6/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00O4CPNV6&linkCode=as2&tag=leedeboo-21&linkId=C2VKQDV357RQ5VUA
     img_src: /images/ebooks/min-200/burning-everybody.jpg
-    name: Burning Eye Press &bull; <span class="italic">Everybody Knows this is Nowhere</span> by Alice Furse
+    publisher: Burning Eye Press
+    title: Everybody Knows this is Nowhere
+    author: Alice Furse
+
   - href: ''
     img_src: /images/ebooks/min-200/csc-china.jpg
-    name: 'Civil Service College, Singapore &bull; <span class="italic">China’s Future: Transition or Transformation?</span>'
+    publisher: Civil Service College, Singapore
+    title: 'China’s Future: Transition or Transformation?'
+
   - href: http://www.amazon.co.uk/gp/product/B00HB2SRBY/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00HB2SRBY&linkCode=as2&tag=leedeboo-21&linkId=I7TE7JURUV44OUA2
     img_src: /images/ebooks/min-200/glenda-child.jpg
-    name: <span class="italic">A Child in the Playground</span> by Glenda George
+    name: A Child in the Playground
+    author: Glenda George
+
   - href: http://www.amazon.co.uk/gp/product/B00KLM70BE/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00KLM70BE&linkCode=as2&tag=leedeboo-21&linkId=JUBJTMDRHU7STPMH
     img_src: /images/ebooks/min-200/influx-above.jpg
-    name: Influx Press &bull; <span class="italic">Above Sugar Hill</span> by Linda Mannheim
+    publisher: Influx Press
+    title: Above Sugar Hill
+    author: Linda Mannheim
+
   - href: http://www.amazon.co.uk/gp/product/B00HURDU94/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00HURDU94&linkCode=as2&tag=leedeboo-21&linkId=V32NQKCZB6J2H5LQ
     img_src: /images/ebooks/min-200/influx-build.jpg
-    name: Influx Press &bull; <span class="italic">Build &amp; Destroy</span> by Steven Camden
+    publisher: Influx Press
+    title: Build & Destroy
+    author: Steven Camden
+
   - href: http://www.amazon.co.uk/gp/product/B00H3OHTZ0/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00H3OHTZ0&linkCode=as2&tag=leedeboo-21&linkId=OLUXV3ULTGAYJF5J
     img_src: /images/ebooks/min-200/influx-marshland.jpg
-    name: Influx Press &bull; <span class="italic">Marshland</span> by Gareth E. Rees
+    publisher: Influx Press
+    title: Marshland
+    author: Gareth E. Rees
+
   - href: http://www.amazon.co.uk/gp/product/B00FX9VEL2/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00FX9VEL2&linkCode=as2&tag=leedeboo-21&linkId=XE626RJOIKKUA4B6
     img_src: /images/ebooks/min-200/iron-miranda.jpg
-    name: Iron Press &bull; <span class="italic">Miranda&rsquo;s Shadow</span> by Kitty Fitzgerald
+    publisher: Iron Press
+    title: Miranda’s Shadow
+    author: Kitty Fitzgerald
+
   - href: http://www.amazon.co.uk/gp/product/B00FM2Q4BK/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00FM2Q4BK&linkCode=as2&tag=leedeboo-21&linkId=NWAKPRN234XER2XE
     img_src: /images/ebooks/min-200/iron-nesting.jpg
-    name: Iron Press &bull; <span class="italic">Nesting</span> by David Almond
+    publisher: Iron Press
+    title: Nesting
+    author: David Almond
+
   - href: http://www.amazon.co.uk/gp/product/B00FX035YU/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00FX035YU&linkCode=as2&tag=leedeboo-21&linkId=LMAAYGFQIDO64G74
     img_src: /images/ebooks/min-200/iron-root.jpg
-    name: 'Iron Press &bull; <span class="italic">Root: New Stories from North East Writers</span>'
+    publisher: Iron Press
+    title: 'Root: New Stories from North East Writers'
+
   - href: http://www.weareklic.com/#!writing/cb3n
     img_src: /images/ebooks/min-200/klic-1.jpg
-    name: KLiC &bull; <span class="italic">KLiCbait Vol.1</span>
+    publisher: KLiC
+    title: KLiCbait Vol.1
+
   - href: http://www.amazon.co.uk/gp/product/B00H8UTEZC/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00H8UTEZC&linkCode=as2&tag=leedeboo-21&linkId=P5AJ42SMD3MSUPOR
     img_src: /images/ebooks/min-200/menard-paradiso.jpg
-    name: Menard Press &bull; <span class="italic">Paradiso</span> by Gillian Rose
+    publisher: Menard Press
+    title: Paradiso
+    author: Gillian Rose
+
   - href: http://www.amazon.co.uk/gp/product/B00CLQ6W12/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00CLQ6W12&linkCode=as2&tag=leedeboo-21&linkId=SWPFNSOA4HKIUYIH
     img_src: /images/ebooks/min-200/mpt-1.jpg
-    name: MPT Modern Poetry in Translation Magazine &bull; <span class="italic">Strange Tracks</span>
+    publisher: MPT Modern Poetry in Translation Magazine
+    title: Strange Tracks
     readbox: https://www.overdrive.com/media/1337610/mpt-strange-tracks/sample
+
   - href: http://www.amazon.co.uk/gp/product/B00EEDE72Q/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00EEDE72Q&linkCode=as2&tag=leedeboo-21&linkId=CBI3LWM5WQBKSX7J
     img_src: /images/ebooks/min-200/mpt-2.jpg
-    name: MPT Modern Poetry in Translation Magazine &bull; <span class="italic">Between Clay and Star</span>
+    publisher: MPT Modern Poetry in Translation Magazine
+    title: Between Clay and Star
     readbox: https://www.overdrive.com/media/1440569/between-clay-and-star/sample
+
   - href: http://www.amazon.co.uk/gp/product/B00GP193CE/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00GP193CE&linkCode=as2&tag=leedeboo-21&linkId=VJPBOMZF2WWQHOGV
     img_src: /images/ebooks/min-200/mpt-3.jpg
-    name: MPT Modern Poetry in Translation Magazine &bull; <span class="italic">Secret Agents of Sense</span>
+    publisher: MPT Modern Poetry in Translation Magazine
+    title: Secret Agents of Sense
     readbox: https://www.overdrive.com/media/1513737/secret-agents-of-sense/sample
+
   - href: http://www.amazon.co.uk/gp/product/B00JOSSWJK/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00JOSSWJK&linkCode=as2&tag=leedeboo-21&linkId=5FZ7HFDY7YLM5AAH
     img_src: /images/ebooks/min-200/mpt-4.jpg
-    name: MPT Modern Poetry in Translation Magazine &bull; <span class="italic">Twisted Angels</span>
+    publisher: MPT Modern Poetry in Translation Magazine
+    title: Twisted Angels
     readbox: https://www.overdrive.com/media/1860133/twisted-angels/sample
+
   - href: http://www.amazon.co.uk/gp/product/B00LXES7T8/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00LXES7T8&linkCode=as2&tag=leedeboo-21&linkId=2CFQVAWJE67K5JQH
     img_src: /images/ebooks/min-200/mpt-5.jpg
-    name: MPT Modern Poetry in Translation Magazine &bull; <span class="italic">The Constellation</span>
+    publisher: MPT Modern Poetry in Translation Magazine
+    title: The Constellation
+
   - href: http://www.amazon.co.uk/gp/product/B00JZXASH8/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00JZXASH8&linkCode=as2&tag=leedeboo-21&linkId=6GXWDD6YMOFXEXCN
     img_src: /images/ebooks/min-200/nine-apple.jpg
-    name: Nine Arches Press &bull; <span class="italic">The Apple Anthology</span>
+    publisher: Nine Arches Press
+    title: The Apple Anthology
+
   - href: http://www.amazon.co.uk/gp/product/B00OHWSJZK/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00OHWSJZK&linkCode=as2&tag=leedeboo-21&linkId=W62GP3V75BTY54ED
     img_src: /images/ebooks/min-200/northway-bass.jpg
-    name: 'Northway Books &bull; <span class="italic">Bass Lines: A Life in Jazz</span> by Coleridge Goode &amp; Roger Cotterrell'
+    publisher: Northway Books
+    title: 'Bass Lines: A Life in Jazz'
+    author: Coleridge Goode & Roger Cotterrell
+
   - href: http://www.amazon.co.uk/gp/product/B00HZ4DAPQ/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00HZ4DAPQ&linkCode=as2&tag=leedeboo-21&linkId=Y27MW7E26KF6PRIQ
     img_src: /images/ebooks/min-200/northway-flying.jpg
-    name: 'Northway Books &bull; <span class="italic">Flying High: A Jazz Life and Beyond</span> by Peter King'
+    publisher: Northway Books
+    title: 'Flying High: A Jazz Life and Beyond'
+    author: Peter King
+
   - href: http://www.amazon.co.uk/gp/product/B00HRAXJ0E/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00HRAXJ0E&linkCode=as2&tag=leedeboo-21&linkId=QYUMMKXUMFGR3SKS
     img_src: /images/ebooks/min-200/northway-workout.jpg
-    name: 'Northway Books &bull; <span class="italic">Workout: The Music of Hank Mobley</span> by Derek Ansell'
+    publisher: Northway Books
+    title: 'Workout: The Music of Hank Mobley'
+    author: Derek Ansell
+
   - href: http://www.amazon.co.uk/gp/product/B00KLLKIGY/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00KLLKIGY&linkCode=as2&tag=leedeboo-21&linkId=EEIA54GW6T6MVOBX
     img_src: /images/ebooks/min-200/penned-mount.jpg
-    name: Penned in the Margins &bull; <span class="italic">Mount London</span>
+    publisher: Penned in the Margins
+    title: Mount London
+
   - href: http://www.amazon.co.uk/gp/product/B00GF5XRRM/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00GF5XRRM&linkCode=as2&tag=leedeboo-21&linkId=WJVUAIGHTITO7V4H
     img_src: /images/ebooks/min-200/rea-boys.jpg
-    name: <span class="italic">Boys Can Dance Too</span> by Rea Hawkins
+    title: Boys Can Dance Too
+    author: Rea Hawkins
+
   - href: http://www.amazon.co.uk/gp/product/B00I32J2RY/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00I32J2RY&linkCode=as2&tag=leedeboo-21&linkId=IGXTSZKWJAJNRM2U
     img_src: /images/ebooks/min-200/rea-desert.jpg
-    name: <span class="italic">Desert Adventure</span> by Rea Hawkins
+    title: Desert Adventure
+    author: Rea Hawkins
+
   - href: http://www.amazon.co.uk/gp/product/B00FJ5P326/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00FJ5P326&linkCode=as2&tag=leedeboo-21&linkId=RLM327QQHFWBJ7EA
     img_src: /images/ebooks/min-200/smokestack-fox.jpg
-    name: Smokestack Books &bull; <span class="italic">Fox Populi</span> by Kate Fox
+    publisher: Smokestack Books
+    title: Fox Populi
+    author: Kate Fox
+
   - href: http://www.amazon.co.uk/gp/product/B00GR5JLCU/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00GR5JLCU&linkCode=as2&tag=leedeboo-21&linkId=KJDO3NDOB7ZWB3FN
     img_src: /images/ebooks/min-200/two-foreigners.jpg
-    name: Two Rivers Press &bull; <span class="italic">Foreigners, Drunks and Babies</span> by Peter Robinson
+    publisher: Two Rivers Press
+    title: Foreigners, Drunks and Babies
+    author: Peter Robinson
+
   - href: http://www.amazon.co.uk/gp/product/B00NY9T68G/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00NY9T68G&linkCode=as2&tag=leedeboo-21&linkId=VHIN7AUZLPTU5KGN
     img_src: /images/ebooks/min-200/waywiser-already.jpg
-    name: Waywiser Press &bull; <span class="italic">Already the Flames</span> by Clive Watkins
+    publisher: Waywiser Press
+    title: Already the Flames
+    author: Clive Watkins
+
   - href: http://www.amazon.co.uk/gp/product/B00KHAMZEM/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00KHAMZEM&linkCode=as2&tag=leedeboo-21&linkId=RLPUMAPD3Z27RMHK
     img_src: /images/ebooks/min-200/waywiser-divining.jpg
-    name: Waywiser Press &bull; <span class="italic">Divining Venus</span> by Mary Elizabeth Pope
+    publisher: Waywiser Press
+    title: Divining Venus
+    author: Mary Elizabeth Pope
+
   - href: http://www.amazon.co.uk/gp/product/B00KHAE1XU/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B00KHAE1XU&linkCode=as2&tag=leedeboo-21&linkId=XYSEYZSZNFDDUH7E
     img_src: /images/ebooks/min-200/waywiser-guinevere.jpg
-    name: Waywiser Press &bull; <span class="italic">Guinevere in Baltimore</span> by Shelley Puhak
+    publisher: Waywiser Press
+    title: Guinevere in Baltimore
+    author: Shelley Puhak
 

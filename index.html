@@ -51,7 +51,13 @@ is_home: true
       <a target="_blank" href="{{ item.href }}">
         <img src="{{ item.img_src }}">
         <figcaption>
-          {{ item.name }}
+          {% if item.publisher %}
+            {{ item.publisher }} &bull;
+          {% endif %}
+          <span class="italic">{{ item.title | xml_escape }}</span>
+          {% if item.author %}
+            by {{ item.author }}
+          {% endif %}
         </figcaption>
       </a>
 
