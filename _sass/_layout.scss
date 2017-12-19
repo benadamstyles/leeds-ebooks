@@ -8,6 +8,7 @@
 
   background-color: $background-color;
   background-image: url(/images/noise.gif);
+  -webkit-box-shadow: $base-shadow-vert;
   box-shadow: $base-shadow-vert;
   padding-top: 0.3em;
 
@@ -132,29 +133,24 @@
 }
 
 .footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
   width: calc(35% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
   width: calc(20% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
   width: calc(45% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
   .footer-col-1,
   .footer-col-2 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
     width: calc(50% - (#{$spacing-unit} / 2));
   }
 
   .footer-col-3 {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
@@ -162,7 +158,6 @@
 @include media-query($on-palm) {
   .footer-col {
     float: none;
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
@@ -223,18 +218,27 @@
 /**
  * Homepage
  */
+
 figure {
   display: inline-block;
   max-width: 7.5em;
   margin: 0 1em 1em 0;
   vertical-align: top;
   img {
+    -webkit-box-shadow: $base-shadow;
     box-shadow: $base-shadow;
   }
 }
+
 .home h2 {
+  -webkit-box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.5);
   box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.5);
-  // box-shadow: 0 5px 7px -4px black;
+}
+
+@include media-query($on-palm) {
+  .home-section figure {
+    max-width: 40%;
+  }
 }
 
 /**

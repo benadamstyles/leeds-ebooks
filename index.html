@@ -7,65 +7,73 @@ is_home: true
 
   <h2>Apps</h2>
 
-  {% for item in site.data.projects.apps %}
-    <figure>
-      <a target="_blank" href="{{ item.href }}">
-        <img src="{{ item.img_src }}" class="appIcon">
-        <figcaption>
-          {{ item.name }}
-        </figcaption>
-      </a>
-    </figure>
-  {% endfor %}
+  <div class="home-section">
+    {% for item in site.data.projects.apps %}
+      <figure>
+        <a target="_blank" href="{{ item.href }}">
+          <img src="{{ item.img_src }}" class="appIcon">
+          <figcaption>
+            {{ item.name }}
+          </figcaption>
+        </a>
+      </figure>
+    {% endfor %}
+  </div>
 
   <h2>Open-Source Projects</h2>
 
-  {% for item in site.data.projects.oss %}
-    <figure>
-      <a target="_blank" href="{{ item.href }}">
-        <img src="{{ item.img_src }}" class="appIcon">
-        <figcaption>
-          {{ item.name }}
-        </figcaption>
-      </a>
-    </figure>
-  {% endfor %}
+  <div class="home-section">
+    {% for item in site.data.projects.oss %}
+      <figure>
+        <a target="_blank" href="{{ item.href }}">
+          <img src="{{ item.img_src }}" class="appIcon">
+          <figcaption>
+            {{ item.name }}
+          </figcaption>
+        </a>
+      </figure>
+    {% endfor %}
+  </div>
 
   <h2>Websites</h2>
 
-  {% for item in site.data.projects.websites %}
-    <figure>
-      <a target="_blank" href="{{ item.href }}">
-        <img src="{{ item.img_src }}">
-        <figcaption>
-          {{ item.name }}
-        </figcaption>
-      </a>
-    </figure>
-  {% endfor %}
+  <div class="home-section">
+    {% for item in site.data.projects.websites %}
+      <figure>
+        <a target="_blank" href="{{ item.href }}">
+          <img src="{{ item.img_src }}">
+          <figcaption>
+            {{ item.name }}
+          </figcaption>
+        </a>
+      </figure>
+    {% endfor %}
+  </div>
 
   <h2>Ebooks</h2>
 
-  {% for item in site.data.projects.ebooks %}
-    <figure>
-      <a target="_blank" href="{{ item.href }}">
-        <img src="{{ item.img_src }}">
-        <figcaption>
-          {% if item.publisher %}
-            {{ item.publisher }} &bull;
-          {% endif %}
-          <span class="italic">{{ item.title | xml_escape }}</span>
-          {% if item.author %}
-            by {{ item.author }}
-          {% endif %}
-        </figcaption>
-      </a>
+  <div class="home-section">
+    {% for item in site.data.projects.ebooks %}
+      <figure>
+        <a target="_blank" href="{{ item.href }}">
+          <img src="{{ item.img_src }}">
+          <figcaption>
+            {% if item.publisher %}
+              {{ item.publisher }} &bull;
+            {% endif %}
+            <span class="italic">{{ item.title | xml_escape }}</span>
+            {% if item.author %}
+              by {{ item.author }}
+            {% endif %}
+          </figcaption>
+        </a>
 
-      {% if item.readbox %}
-        {% include readbox.html href=item.readbox %}
-      {% endif %}
+        {% if item.readbox %}
+          {% include readbox.html href=item.readbox %}
+        {% endif %}
 
-    </figure>
-  {% endfor %}
+      </figure>
+    {% endfor %}
+  </div>
 
 </div>
