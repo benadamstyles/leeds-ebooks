@@ -1,0 +1,25 @@
+---
+layout: default
+title: Events
+permalink: /events/
+weight: 0
+---
+
+<div class="home">
+
+  <ul class="post-list">
+    {% assign events = site.data.events | sort: 'date' | reverse %}
+    {% for event in events %}
+      <li>
+        <span class="post-meta">{{ event.date | date: "%-d %b, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ event.url }}" target="_blank">
+            {{ event.title }} ➚
+          </a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
