@@ -2,9 +2,6 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt)
 
   grunt.initConfig({
-    // 'jekyll': {
-    //   'default': {}
-    // },
     'ftp-deploy': {
       default: {
         auth: {
@@ -18,6 +15,5 @@ module.exports = function(grunt) {
     },
   })
 
-  // Default task.
-  grunt.registerTask('default', [/* 'jekyll', */ 'ftp-deploy'])
+  grunt.registerTask('default', ['ftp-deploy'])
 }
