@@ -1,25 +1,23 @@
 module.exports = function(grunt) {
-
-  require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt)
 
   grunt.initConfig({
-    'jekyll': {
-      'default': {}
-    },
+    // 'jekyll': {
+    //   'default': {}
+    // },
     'ftp-deploy': {
-      'default': {
+      default: {
         auth: {
           host: 'ftp.leeds-ebooks.co.uk',
           port: 21,
-          authKey: 'ben'
+          authKey: 'ben',
         },
         src: '_site',
-        dest: 'public_html'
-      }
-    }
-  });
+        dest: 'public_html',
+      },
+    },
+  })
 
   // Default task.
-  grunt.registerTask('default', ['jekyll', 'ftp-deploy']);
-
-};
+  grunt.registerTask('default', [/* 'jekyll', */ 'ftp-deploy'])
+}
