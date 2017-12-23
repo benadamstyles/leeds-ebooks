@@ -1,28 +1,30 @@
-# Site settings
 title: Leeds Ebooks
 email: enquiries@leeds-ebooks.co.uk
-description: > # this means to ignore newlines until "baseurl:"
-  Affordable handmade digital products for writers, artists and creators.
+description: Affordable handmade digital products for writers, artists and creators.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://leeds-ebooks.co.uk" # the base hostname & protocol for your site
+url: https://leeds-ebooks.co.uk # the base hostname & protocol for your site
 twitter_username: BenStyles
-github_username:  leeds-ebooks
+github_username: leeds-ebooks
 
 permalink: /blog/:year/:month/:title/
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-exclude: ['Gruntfile.js', 'package.json', 'node_modules']
+exclude:
+  - Gruntfile.js
+  - package.json
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - yarn.lock
 
 # Assets
 sass:
   style: compressed
 
 # Plugins
+livereload: true
 sitemap:
-    include_posts:
-        - "/blog/index.html"
-
-gems:
-  - jekyll-gist
+  include_posts:
+    - /blog/index.html

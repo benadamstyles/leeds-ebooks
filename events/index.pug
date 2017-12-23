@@ -1,0 +1,19 @@
+---
+layout: default
+title: Events
+permalink: /events/
+weight: 0
+---
+
+| {% assign events = site.data.events | sort: 'date' | reverse %}
+
+.home
+  ul.post-list
+
+    | {% for event in events %}
+    li
+      span.post-meta {{ event.date | date: "%-d %b, %Y" }}
+      h2
+        a.post-link(href="{{ event.url }}" target="_blank")
+          | {{ event.title }} ➚
+    | {% endfor %}

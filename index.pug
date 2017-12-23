@@ -1,0 +1,55 @@
+---
+layout: default
+is_home: true
+---
+
+mixin figure(imgClassName)
+  figure
+    a(target='_blank' href='{{ item.href }}')
+      img(src='{{ item.img_src }}' class=imgClassName)
+      figcaption {{ item.name }}
+
+.home
+
+  h2 Apps
+
+  .home-section
+    | {% for item in site.data.projects.apps %}
+    +figure('appIcon')
+    | {% endfor %}
+
+  h2 Open-Source Projects
+
+  .home-section
+    | {% for item in site.data.projects.oss %}
+    +figure('appIcon')
+    | {% endfor %}
+
+  h2 Websites
+
+  .home-section
+    | {% for item in site.data.projects.websites %}
+    +figure
+    | {% endfor %}
+
+  h2 Ebooks
+
+  .home-section
+    | {% for item in site.data.projects.ebooks %}
+    figure
+      a(target='_blank' href='{{ item.href }}')
+        img(src='{{ item.img_src }}')
+        figcaption
+          | {% if item.publisher %}
+          | {{ item.publisher }} &bull;
+          | {% endif %}
+          span.italic {{ item.title | xml_escape }}
+            | {% if item.author %}
+            | by {{ item.author }}
+            | {% endif %}
+
+      | {% if item.readbox %}
+      | {% include readbox.html href=item.readbox %}
+      | {% endif %}
+
+    | {% endfor %}
