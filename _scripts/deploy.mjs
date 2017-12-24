@@ -78,11 +78,10 @@ void (async () => {
   try {
     const {username, password} = await getAuthVals()
     await auth(username, password)
+
     const data = dirParseSync(localRoot)
-    const total = (await _.values(data)
-      .flatten()
-      .collect()
-      .toPromise(Promise)).length
+    const total = [].concat(...Object.values(data)).length
+
     const progress = new Progress(
       '[:bar] :percent :elapseds elapsed :etas remaining',
       {
@@ -92,11 +91,12 @@ void (async () => {
         incomplete: ' ',
       }
     )
+
     await _.pairs(data)
-      .map(([path, files]) => _(ftpProcessLocation(path, files, progress)))
-      .series()
+      .flatMap(([path, files]) => _(ftpProcessLocation(path, files, progress)))
       .collect()
       .toPromise(Promise)
+
     await raw('quit')
     log.info('FTP upload completed')
   } catch (e) {
