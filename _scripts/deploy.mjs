@@ -40,8 +40,8 @@ const ftpPut = async (path, file) => {
     await put(p.normalize(p.join(localRoot, path, file)), file)
     log.debug('Uploaded file: ' + file + ' to: ' + path)
   } catch (e) {
-    log.error('Cannot upload file: ' + file + ' --> ' + err)
-    throw err
+    log.error('Cannot upload file: ' + file + ' --> ' + e)
+    throw e
   }
 }
 
@@ -56,8 +56,8 @@ const ftpCwd = async path => {
       log.debug('New remote folder created ' + path)
       return ftpCwd(path)
     } catch (e) {
-      log.error('Error creating new remote folder', path, '-->', err)
-      throw err
+      log.error('Error creating new remote folder', path, '-->', e)
+      throw e
     }
   }
 }
@@ -93,14 +93,15 @@ void (async () => {
     )
 
     await _.pairs(data)
-      .flatMap(([path, files]) => _(ftpProcessLocation(path, files, progress)))
+      .map(([path, files]) => _(ftpProcessLocation(path, files, progress)))
+      .series()
       .collect()
       .toPromise(Promise)
 
     await raw('quit')
     log.info('FTP upload completed')
   } catch (e) {
-    log.error(e)
+    console.error(e)
     process.exit(1)
   }
 })()
