@@ -5,13 +5,24 @@ import p from 'path'
 import {promisify} from 'util'
 import loadJson from 'load-json-file'
 import Ftp from 'jsftp'
-import _ from 'highland'
 import Log from 'log-color-optionaldate'
 import Progress from 'progress'
-import {deploy} from '../package.json'
+import {maybe} from 'maybes'
 
 const log = new Log({level: 'info', color: true, date: false})
-const {host, port, authKey} = deploy.auth
+
+const isDirectory = path => fs.statSync(path).isDirectory()
+
+const getProgress = total =>
+  new Progress('[:bar] :percent :elapseds elapsed :etas remaining', {
+    total,
+    width: 40,
+    complete: '•',
+    incomplete: ' ',
+  })
+
+import {deploy} from '../package.json'
+const {src: localRoot, dest: remoteRoot, auth: {host, port, authKey}} = deploy
 const ftp = new Ftp({host, port})
 ftp.useList = true
 
@@ -19,18 +30,21 @@ const auth = promisify(ftp.auth.bind(ftp))
 const raw = promisify(ftp.raw.bind(ftp))
 const put = promisify(ftp.put.bind(ftp))
 
-const {src: localRoot, dest: remoteRoot} = deploy
+const getAuthVals = async () => (await loadJson('.ftppass'))[authKey]
 
-const isDirectory = path => fs.lstatSync(path).isDirectory()
-
-const dirParseSync = (startDir, result = {[p.sep]: []}) =>
+const dirParse = (
+  startDir,
+  result = new Map([[p.sep, []]])
+): Map<string, string[]> =>
   fs.readdirSync(startDir).reduce((res, file, i) => {
     if (isDirectory(p.join(startDir, file))) {
       const tmpPath = p.relative(localRoot, p.join(startDir, file))
-      res[tmpPath] = res[tmpPath] || []
-      return dirParseSync(p.join(startDir, file), res)
+      if (!res.has(tmpPath)) res.set(tmpPath, [])
+      return dirParse(p.join(startDir, file), res)
     } else {
-      res[p.relative(localRoot, startDir) || p.sep].push(file)
+      maybe(res.get(p.relative(localRoot, startDir) || p.sep)).forEach(arr =>
+        arr.push(file)
+      )
       return res
     }
   }, result)
@@ -46,9 +60,8 @@ const ftpPut = async (path, file) => {
 }
 
 const ftpCwd = async path => {
-  log.debug(`ftpCwd ${path}`)
-
   try {
+    log.debug(`ftpCwd ${path}`)
     await raw('cwd', path)
   } catch (e) {
     try {
@@ -64,7 +77,7 @@ const ftpCwd = async path => {
 
 const ftpProcessLocation = async (path, files, progress) => {
   log.debug(`ftpProcessLocation ${path}`)
-  if (!files) throw new Error('Data for ' + path + ' not found')
+  if (!files) throw new Error(`Data for ${path} not found`)
   await ftpCwd(p.normalize('/' + p.join(remoteRoot, path)))
   for (const file of files) {
     await ftpPut(path, file)
@@ -72,31 +85,17 @@ const ftpProcessLocation = async (path, files, progress) => {
   }
 }
 
-const getAuthVals = async () => (await loadJson('.ftppass'))[authKey]
-
 void (async () => {
   try {
     const {username, password} = await getAuthVals()
     await auth(username, password)
 
-    const data = dirParseSync(localRoot)
-    const total = [].concat(...Object.values(data)).length
+    const data = dirParse(localRoot)
+    const progress = getProgress([].concat(...data.values()).length)
 
-    const progress = new Progress(
-      '[:bar] :percent :elapseds elapsed :etas remaining',
-      {
-        total,
-        width: 40,
-        complete: '•',
-        incomplete: ' ',
-      }
-    )
-
-    await _.pairs(data)
-      .map(([path, files]) => _(ftpProcessLocation(path, files, progress)))
-      .series()
-      .collect()
-      .toPromise(Promise)
+    for (const [path, files] of data) {
+      await ftpProcessLocation(path, files, progress)
+    }
 
     await raw('quit')
     log.info('FTP upload completed')

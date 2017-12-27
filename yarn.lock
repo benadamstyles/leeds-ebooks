@@ -448,12 +448,6 @@ hawk@~6.0.2:
     hoek "4.x.x"
     sntp "2.x.x"
 
-highland@^2.11.1:
-  version "2.11.1"
-  resolved "https://registry.yarnpkg.com/highland/-/highland-2.11.1.tgz#39b4d9299b6e07da3d15e7af7b2a6f127522acaf"
-  dependencies:
-    util-deprecate "^1.0.2"
-
 hoek@4.x.x:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.0.tgz#72d9d0754f7fe25ca2d01ad8f8f9a9449a89526d"
@@ -647,6 +641,10 @@ lowercase-keys@^1.0.0:
   dependencies:
     buffers "~0.1.1"
     readable-stream "~1.0.0"
+
+maybes@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/maybes/-/maybes-0.2.3.tgz#be66ba9852d809f9f9b30fc143d414d1de279bfd"
 
 md5@^2.1.0:
   version "2.2.1"
@@ -1108,10 +1106,6 @@ url-parse-lax@^1.0.0:
 url-to-options@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/url-to-options/-/url-to-options-1.0.1.tgz#1505a03a289a48cbd7a434efbaeec5055f5633a9"
-
-util-deprecate@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
 
 uuid@^3.1.0:
   version "3.1.0"

@@ -23,10 +23,10 @@
     "@std/esm": "^0.18.0",
     "flow-bin": "^0.59",
     "flow-typed": "^2.2.3",
-    "highland": "^2.11.1",
     "jsftp": "^2.1.2",
     "load-json-file": "^4.0.0",
     "log-color-optionaldate": "^1.1.1",
+    "maybes": "^0.2.3",
     "progress": "^2.0.0"
   },
   "deploy": {
