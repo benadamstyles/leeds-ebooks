@@ -18,6 +18,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - yarn.lock
+  - flow-typed
 
 # Assets
 sass:

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "bundle exec jekyll serve",
-    "upload": "node -r @std/esm ./_scripts/deploy.mjs",
+    "upload": "node -r @std/esm -r flow-remove-types/register ./_scripts/deploy.mjs",
     "deploy": "bundle exec jekyll build && yarn run upload"
   },
   "repository": {
@@ -22,9 +22,11 @@
   "devDependencies": {
     "@std/esm": "^0.18.0",
     "flow-bin": "^0.59",
+    "flow-remove-types": "^1.2.3",
     "flow-typed": "^2.2.3",
+    "hash-files": "^1.1.1",
     "jsftp": "^2.1.2",
-    "load-json-file": "^4.0.0",
+    "jsonfile": "^4.0.0",
     "log-color-optionaldate": "^1.1.1",
     "maybes": "^0.2.3",
     "progress": "^2.0.0"

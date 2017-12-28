@@ -3,3 +3,4 @@ _site
 node_modules
 .ftppass
 .pug-cache
+hashes.json

@@ -3,23 +3,47 @@
 import fs from 'fs'
 import p from 'path'
 import {promisify} from 'util'
-import loadJson from 'load-json-file'
+import jsonfile from 'jsonfile'
 import Ftp from 'jsftp'
 import Log from 'log-color-optionaldate'
 import Progress from 'progress'
 import {maybe} from 'maybes'
+import hashOrig from 'hash-files'
+import Store from './json-store.mjs'
 
-const log = new Log({level: 'info', color: true, date: false})
+// const loglevel = 'debug'
+const loglevel = 'info'
+const log = new Log({level: loglevel, color: true, date: false})
 
 const isDirectory = path => fs.statSync(path).isDirectory()
 
 const getProgress = total =>
-  new Progress('[:bar] :percent :elapseds elapsed :etas remaining', {
-    total,
-    width: 40,
-    complete: '•',
-    incomplete: ' ',
-  })
+  loglevel !== 'debug'
+    ? new Progress('[:bar] :percent :elapseds elapsed :etas remaining', {
+        total,
+        width: 40,
+        complete: '•',
+        incomplete: ' ',
+      })
+    : {tick: x => null}
+
+const hash = promisify(hashOrig)
+const getDirectoryHash = files => hash({files, noGlob: true})
+const hashStore = new Store('./hashes.json')
+
+const matches = async (path, files) => {
+  log.debug(`Checking if hash matches for path ${path}`)
+  const newHash = await getDirectoryHash(
+    files.map(f => p.join(localRoot, path, f))
+  )
+  const oldHash = hashStore.get(path)
+  const match = newHash === oldHash
+  log.debug(`Previous hash ${oldHash}`)
+  log.debug(`New hash ${newHash}`)
+  log.debug(`Hashes ${match ? 'DO' : 'DON’T'} match`)
+  if (!match) hashStore.set(path, newHash)
+  return match
+}
 
 import {deploy} from '../package.json'
 const {src: localRoot, dest: remoteRoot, auth: {host, port, authKey}} = deploy
@@ -30,7 +54,8 @@ const auth = promisify(ftp.auth.bind(ftp))
 const raw = promisify(ftp.raw.bind(ftp))
 const put = promisify(ftp.put.bind(ftp))
 
-const getAuthVals = async () => (await loadJson('.ftppass'))[authKey]
+const getAuthVals = async () =>
+  (await promisify(jsonfile.readFile)('.ftppass'))[authKey]
 
 const dirParse = (
   startDir,
@@ -61,7 +86,7 @@ const ftpPut = async (path, file) => {
 
 const ftpCwd = async path => {
   try {
-    log.debug(`ftpCwd ${path}`)
+    log.debug(`ftp cwd ${path}`)
     await raw('cwd', path)
   } catch (e) {
     try {
@@ -76,12 +101,19 @@ const ftpCwd = async path => {
 }
 
 const ftpProcessLocation = async (path, files, progress) => {
-  log.debug(`ftpProcessLocation ${path}`)
+  log.debug('')
+  log.debug(`Processing location ${path}`)
   if (!files) throw new Error(`Data for ${path} not found`)
   await ftpCwd(p.normalize('/' + p.join(remoteRoot, path)))
-  for (const file of files) {
-    await ftpPut(path, file)
-    progress.tick()
+
+  if (!await matches(path, files)) {
+    for (const file of files) {
+      await ftpPut(path, file)
+      progress.tick()
+    }
+  } else {
+    log.debug(`Skipping directory ${path}`)
+    progress.tick(files.length)
   }
 }
 
@@ -97,7 +129,9 @@ void (async () => {
       await ftpProcessLocation(path, files, progress)
     }
 
+    await hashStore.close()
     await raw('quit')
+
     log.info('FTP upload completed')
   } catch (e) {
     console.error(e)
