@@ -11,17 +11,17 @@ mixin figure(imgClassName)
 
 .home
 
-  h2 Apps
-
-  .home-section
-    | {% for item in site.data.projects.apps %}
-    +figure('appIcon')
-    | {% endfor %}
-
   h2 Open-Source Projects
 
   .home-section
     | {% for item in site.data.projects.oss %}
+    +figure('appIcon')
+    | {% endfor %}
+
+  h2 Apps
+
+  .home-section
+    | {% for item in site.data.projects.apps %}
     +figure('appIcon')
     | {% endfor %}
 

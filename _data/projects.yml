@@ -1,12 +1,20 @@
 oss:
 
+  - name: Rapt – wrap any value so you can map over it
+    href: https://github.com/Leeds-eBooks/rapt
+    img_src: /images/oss/min/rapt.png
+
+  - name: Pure&shy;Render&shy;Callback&shy;Component – use the render callback pattern without sacrificing component purity
+    href: https://github.com/Leeds-eBooks/pure-render-callback-component
+    img_src: /images/oss/min/react.png
+
   - name: Ebookama – ebook automation in node.js
     href: https://github.com/leeds-ebooks/ebookama
-    img_src: /images/oss/min/kingfisher.jpg
+    img_src: /images/oss/min/epub.png
 
   - name: roots-i18n – internationalization extension for the Roots static site generator
     href: https://github.com/Leeds-eBooks/roots-i18n
-    img_src: /images/oss/min/kingfisher.jpg
+    img_src: /images/oss/min/roots.png
 
   - name: Kingfisher syntax theme for Atom
     href: https://atom.io/themes/kingfisher-syntax
