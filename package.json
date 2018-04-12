@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "bundle exec jekyll serve",
-    "upload": "node -r @std/esm -r flow-remove-types/register ./_scripts/deploy.mjs",
-    "deploy": "bundle exec jekyll build && yarn run upload"
+    "upload": "yarn run upload-site",
+    "postupload": "echo https://leeds-ebooks.co.uk",
+    "build": "bundle exec jekyll build",
+    "deploy": "yarn build && yarn run upload"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,6 @@
   },
   "homepage": "https://github.com/Leeds-eBooks/leeds-ebooks",
   "devDependencies": {
-    "@std/esm": "^0.18.0",
     "flow-bin": "^0.59",
     "flow-remove-types": "^1.2.3",
     "flow-typed": "^2.2.3",
@@ -29,9 +30,10 @@
     "jsonfile": "^4.0.0",
     "log-color-optionaldate": "^1.1.1",
     "maybes": "^0.2.3",
-    "progress": "^2.0.0"
+    "progress": "^2.0.0",
+    "upload-site": "^0.0.10"
   },
-  "deploy": {
+  "upload-site": {
     "auth": {
       "host": "ftp.leeds-ebooks.co.uk",
       "port": 21,

@@ -3,4 +3,5 @@ _site
 node_modules
 .ftppass
 .pug-cache
-hashes.json
+.hashes.json
+yarn-error.log
